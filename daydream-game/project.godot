@@ -21,7 +21,7 @@ driver/enable_input=true
 
 [autoload]
 
-MicInput="*res://MicInput.gd/MicInput.gd"
+MicInput="*res://Assets/MicInput.gd"
 
 [rendering]
 
