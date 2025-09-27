@@ -11,5 +11,18 @@ config_version=5
 [application]
 
 config/name="Daydream Game"
+run/main_scene="uid://tjsopxgwf3ht"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+driver/enable_input=true
+
+[autoload]
+
+MicInput="*res://MicInput.gd/MicInput.gd"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
