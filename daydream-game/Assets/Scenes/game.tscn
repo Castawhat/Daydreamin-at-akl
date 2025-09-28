@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmlqk14bt8orh"]
+[gd_scene load_steps=8 format=3 uid="uid://cmlqk14bt8orh"]
 
 [ext_resource type="Texture2D" uid="uid://q5klnd5s6418" path="res://Assets/sprites/world_tileset.png" id="1_nbu75"]
 [ext_resource type="PackedScene" uid="uid://tjsopxgwf3ht" path="res://Assets/Scenes/player.tscn" id="2_pfbgl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfbgl"]
+size = Vector2(2.93632, 51.6119)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfbgl"]
 texture = ExtResource("1_nbu75")
@@ -243,8 +246,23 @@ texture = ExtResource("1_nbu75")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_pfbgl")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pfbgl"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_pfbgl"]
+
 [node name="GAME" type="Node2D"]
 position = Vector2(34, 85)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(634, -77)
+scale = Vector2(-24.201, 5)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.888395, 5.8)
+scale = Vector2(1.28057, 0.395843)
+shape = SubResource("RectangleShape2D_pfbgl")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-1, 4)
@@ -254,6 +272,8 @@ layer_0/tile_data = PackedInt32Array(262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 2
 
 [node name="Player" parent="." instance=ExtResource("2_pfbgl")]
 position = Vector2(-56, 64)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Label" type="Label" parent="Player"]
 offset_right = 40.0
@@ -264,3 +284,17 @@ offset_left = 613.0
 offset_top = -82.0
 offset_right = 672.0
 offset_bottom = -58.0
+
+[node name="level1d" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level1d"]
+position = Vector2(0, 219)
+shape = SubResource("WorldBoundaryShape2D_pfbgl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamMicrophone_pfbgl")
+volume_db = 4.685
+autoplay = true
+
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="level1d" to="Player" method="_on_level_1d_body_entered"]

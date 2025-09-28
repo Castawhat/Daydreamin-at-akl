@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhw5nv78fc35m"]
+[gd_scene load_steps=8 format=3 uid="uid://2gmd6fjuy07j"]
 
-[ext_resource type="Texture2D" uid="uid://q5klnd5s6418" path="res://Assets/sprites/world_tileset.png" id="1_i8k3i"]
-[ext_resource type="PackedScene" uid="uid://tjsopxgwf3ht" path="res://Assets/Scenes/player.tscn" id="2_u2y1v"]
+[ext_resource type="Texture2D" uid="uid://q5klnd5s6418" path="res://Assets/sprites/world_tileset.png" id="1_47pyb"]
+[ext_resource type="PackedScene" uid="uid://tjsopxgwf3ht" path="res://Assets/Scenes/player.tscn" id="2_rsgx7"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i8k3i"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qudfn"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8k3i"]
-texture = ExtResource("1_i8k3i")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rsgx7"]
+texture = ExtResource("1_47pyb")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -256,55 +256,51 @@ texture = ExtResource("1_i8k3i")
 3:15/0 = 0
 3:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_e6dex"]
+[sub_resource type="TileSet" id="TileSet_s8o26"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_i8k3i")
+sources/0 = SubResource("TileSetAtlasSource_rsgx7")
 
-[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_i8k3i"]
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_47pyb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2y1v"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qudfn"]
 
-[node name="Game Dos" type="Node2D"]
+[node name="Scene Tres" type="Node2D"]
 
-[node name="level2d" type="Area2D" parent="."]
-position = Vector2(-1, 4)
+[node name="level3d" type="Area2D" parent="."]
+position = Vector2(-1, 7)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="level2d"]
-position = Vector2(153, 165)
-shape = SubResource("WorldBoundaryShape2D_i8k3i")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level3d"]
+position = Vector2(153, 149)
+shape = SubResource("WorldBoundaryShape2D_qudfn")
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-1, 4)
-tile_set = SubResource("TileSet_e6dex")
+position = Vector2(-20, 21)
+tile_set = SubResource("TileSet_s8o26")
 format = 2
-layer_0/tile_data = PackedInt32Array(262145, 524288, 0, 262146, 524288, 0, 262147, 524288, 0, 262148, 524288, 0, 262149, 524288, 0, 262150, 524288, 0, 262152, 524288, 0, 262151, 524288, 0, 262155, 524288, 0, 262156, 524288, 0, 262157, 524288, 0, 262158, 524288, 0, 262159, 524288, 0, 262160, 524288, 0, 262161, 524288, 0, 262162, 524288, 0, 262163, 524288, 0, 262164, 524288, 0, 262165, 524288, 0, 262167, 524288, 0, 262168, 524288, 0, 196632, 524288, 0, 196633, 524288, 0, 131097, 524288, 0, 131098, 524288, 0, 65562, 524288, 0, 131099, 524288, 0, 65563, 524288, 0, 27, 524288, 0, 196635, 524288, 0, 262171, 524288, 0, 262170, 524288, 0, 262169, 524288, 0, 196634, 524288, 0, 28, 524288, 0, 29, 524288, 0, 30, 524288, 0, 31, 524288, 0, 32, 524288, 0, 37, 524288, 0, 38, 524288, 0, 39, 524288, 0, 40, 524288, 0, 41, 524288, 0, 42, 524288, 0, 46, 524288, 0, 47, 524288, 0, 48, 524288, 0, 49, 524288, 0, 50, 524288, 0, 51, 524288, 0, 52, 524288, 0, 43, 524288, 0, -65484, 524288, 0, -65483, 524288, 0, -131019, 524288, 0, -131018, 524288, 0, -196554, 524288, 0, -262090, 524288, 0, -262089, 524288, 0, -262088, 524288, 0, -262087, 524288, 0, -262086, 524288, 0, -262085, 524288, 0, -262084, 524288, 0, -262083, 524288, 0, -262082, 524288, 0, -262078, 524288, 0, -262077, 524288, 0, -262076, 524288, 0, -262075, 524288, 0, -262074, 524288, 0, 36, 524288, 0, 35, 524288, 0, -262079, 524288, 0)
+layer_0/tile_data = PackedInt32Array(262145, 393216, 0, 262146, 393216, 0, 262147, 393216, 0, 262148, 393216, 0, 262149, 393216, 0, 262150, 393216, 0, 262151, 393216, 0, 262152, 393216, 0, 262153, 393216, 0, 262154, 393216, 0, 262157, 393216, 0, 262158, 393216, 0, 262159, 393216, 0, 262160, 393216, 0, 262161, 393216, 0, 262162, 393216, 0, 262163, 393216, 0, 262164, 393216, 0, 262165, 393216, 0, 196629, 393216, 0, 196630, 393216, 0, 131094, 393216, 0, 131095, 393216, 0, 131096, 393216, 0, 131097, 393216, 0, 131098, 393216, 0, 131099, 393216, 0, 131100, 393216, 0, 131101, 393216, 0, 327712, 393216, 0, 327713, 393216, 0, 327714, 393216, 0, 327715, 393216, 0, 327716, 393216, 0, 327717, 393216, 0, 327718, 393216, 0, 327719, 393216, 0, 327720, 393216, 0, 327721, 393216, 0, 327722, 393216, 0, 327723, 393216, 0, 327727, 393216, 0, 327728, 393216, 0, 327729, 393216, 0, 327730, 393216, 0, 327731, 393216, 0, 327732, 393216, 0, 327733, 393216, 0, 327734, 393216, 0, 327735, 393216, 0, 458811, 393216, 0, 458812, 393216, 0, 458813, 393216, 0, 458814, 393216, 0, 458815, 393216, 0, 458816, 393216, 0, 458817, 393216, 0, 458818, 393216, 0, 393285, 393216, 0, 393286, 393216, 0, 393287, 393216, 0, 393288, 393216, 0, 393289, 393216, 0, 393290, 393216, 0, 393291, 393216, 0, 393292, 393216, 0, 393293, 393216, 0, 393294, 393216, 0, 327758, 393216, 0, 327759, 393216, 0, 327760, 393216, 0, 327761, 393216, 0, 262225, 393216, 0, 196690, 393216, 0, 196691, 393216, 0, 196692, 393216, 0, 262226, 393216, 0, 262227, 393216, 0, 196695, 393216, 0, 196696, 393216, 0, 196697, 393216, 0, 196698, 393216, 0, 196699, 393216, 0, 196702, 393216, 0, 196703, 393216, 0, 196704, 393216, 0, 196705, 393216, 0, 196706, 393216, 0, 196707, 393216, 0, 196708, 393216, 0, 196709, 524288, 0, 196710, 524288, 0, 196711, 524288, 0, 196712, 524288, 0, 196713, 524288, 0, 196714, 524288, 0, 131178, 458752, 3, 65642, 458752, 3, 106, 458752, 3, -65430, 458752, 3, -130966, 458752, 3, -130967, 458752, 3, -130968, 458752, 3, -130969, 458752, 3, -130970, 458752, 3, -130971, 458752, 3, -65435, 458752, 3, 101, 458752, 3)
 
-[node name="Player" parent="." instance=ExtResource("2_u2y1v")]
-position = Vector2(22, 60)
-collision_layer = 3
-collision_mask = 3
+[node name="Player" parent="." instance=ExtResource("2_rsgx7")]
+position = Vector2(20, 71)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 613.0
-offset_top = -82.0
+offset_top = -79.0
 offset_right = 672.0
-offset_bottom = -58.0
+offset_bottom = -55.0
 metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-1, 4)
-stream = SubResource("AudioStreamMicrophone_i8k3i")
+stream = SubResource("AudioStreamMicrophone_47pyb")
 volume_db = 4.685
 autoplay = true
 
-[node name="level2-3" type="Area2D" parent="."]
+[node name="level3-4" type="Area2D" parent="."]
 position = Vector2(1087, -69)
 scale = Vector2(3.28285, 3.51254)
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="level2-3"]
-shape = SubResource("RectangleShape2D_u2y1v")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level3-4"]
+shape = SubResource("RectangleShape2D_qudfn")
 
-[connection signal="body_entered" from="level2d" to="Player" method="_on_level_2d_body_entered"]
-[connection signal="body_entered" from="level2-3" to="Player" method="_on_level_23_body_entered"]
+[connection signal="body_entered" from="level3d" to="Player" method="_on_level_3d_body_entered"]

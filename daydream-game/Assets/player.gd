@@ -71,3 +71,39 @@ func _input(event: InputEvent) -> void:
 			click_counter = 0
 			
 			_update_label()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Assets/Scenes/Secne 2.tscn")
+
+
+
+
+
+func _on_level_2d_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Assets/Scenes/game.tscn")
+
+
+func _on_level_1d_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_level_3d_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Assets/Scenes/Secne 2.tscn")
+	
+func _on_level_4d_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scene_tres.tscn")
+
+func _on_level_5d_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Assets/Scenes/Scene_4.tscn")
+
+func _on_level_23_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scene_4.tscn")
+	
+func _on_level_34_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scene_5.tscn")
+	
+
+
+func _on_level_45_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

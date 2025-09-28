@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci3yjibya22sb"]
+
+[ext_resource type="Script" uid="uid://dhi7q3wbkhqfp" path="res://start-MENU.gd" id="1_06t4h"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_06t4h"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_06t4h")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 343.0
+offset_top = 121.0
+offset_right = 858.0
+offset_bottom = 194.0
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 48
+text = "Sacrifice Platformer"
+tab_size = 7
+
+[node name="Button" type="Button" parent="."]
+offset_left = 450.0
+offset_top = 206.0
+offset_right = 685.0
+offset_bottom = 321.0
+theme_override_font_sizes/font_size = 50
+text = "Play!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamMicrophone_06t4h")
+volume_db = 4.685
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
