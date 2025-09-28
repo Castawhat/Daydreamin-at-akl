@@ -95,15 +95,22 @@ func _on_level_4d_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://scene_tres.tscn")
 
 func _on_level_5d_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://Assets/Scenes/Scene_4.tscn")
+	get_tree().change_scene_to_file("res://Assets/Scene_4.tscn")
 
 func _on_level_23_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://scene_4.tscn")
+	get_tree().change_scene_to_file("res://scene_tres.tscn")
 	
 func _on_level_34_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://scene_5.tscn")
+	get_tree().change_scene_to_file("res://scene_4.tscn")
+
+func _on_5Restart_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://main_menu.tscn")
 	
 
 
 func _on_level_45_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scene_5.tscn")
+
+
+func _on_restart_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scene_4.tscn")
